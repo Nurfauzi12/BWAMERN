@@ -24,8 +24,8 @@ export default function Button(props) {
             <span className="sr-only">Loading...</span>
           </>
         ) : (
-          props.children
-        )}
+            props.children
+          )}
       </span>
     );
   }
@@ -49,7 +49,7 @@ export default function Button(props) {
           to={props.href}
           className={className.join(" ")}
           style={props.style}
-          onClick={onclick}
+          onClick={onClick}
         >
           {props.children}
         </Link>
@@ -75,6 +75,7 @@ Button.propTypes = {
   target: propTypes.string,
   className: propTypes.string,
   isExternal: propTypes.bool,
+  isPrimary: propTypes.bool,
   isDisabled: propTypes.bool,
   isLoading: propTypes.bool,
   isSmall: propTypes.bool,
